@@ -16,6 +16,7 @@ export const fetchPost = createServerFn()
     );
     if (!res.ok) {
       if (res.status === 404) {
+        // eslint-disable-next-line @typescript-eslint/only-throw-error
         throw notFound();
       }
 
